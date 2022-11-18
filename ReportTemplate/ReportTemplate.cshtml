@@ -16,6 +16,7 @@
     <div>
         <h1>Отчет</h1>
         <h2>Время: @DateTime.Now</h2>
+        <h6>Путь: @Model.RootFolderFullPath</h6>
         <ul id="myUL">
             <li>
                 <span class="caret">Mime-типы в директории</span>
@@ -35,6 +36,7 @@
                     }
                 </ul>
         </ul>
+        </div>
         @{
             await IncludeAsync("TemplateScriptsPartial.cshtml");
         }

@@ -38,7 +38,7 @@ namespace DirMimeTypeParser.HTMLGenerator
 
             var htmlPage = await razorCompiler.Compile();
 
-            File.WriteAllText(Path.Combine(reportDocPath,$"report.html"),htmlPage);
+            File.WriteAllText(Path.Combine(reportDocPath,$"report{DateTime.Now.ToString("yyyyMMddhhmmss")}.html"),htmlPage);
         }
     }
 }

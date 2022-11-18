@@ -1,6 +1,7 @@
 ﻿using DirMimeTypeParser.DirectoryDataParser;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,11 +31,21 @@ namespace DirMimeTypeParser.HTMLGenerator.RazorPagesCompiler.model
         /// Вся информация о Mime-типах всех файлов директории в виде списка
         /// </summary>
         public List<ParsedMimeTypesInfo> ParsedMimeTypes { get; set; }
+        public string RootFolderFullPath { get; set;}
 
         private DirNode parsedDirTree;
 
+        public ReportModel(string dirPath,out List<string> logs)
+        {
+            RootFolderFullPath = dirPath;
+            this.parsedDirTree = new DirectoryDataTreeParser(dirPath).GetParsedData(out logs);
+            ParsedMimeTypes = new List<ParsedMimeTypesInfo>();
+            GetMimeTypesInfo(parsedDirTree);
+        }
+
         public ReportModel(DirNode parsedDirTree)
         {
+            RootFolderFullPath = Path.GetFullPath(parsedDirTree.Name);
             this.parsedDirTree = parsedDirTree;
             ParsedMimeTypes = new List<ParsedMimeTypesInfo>();
             GetMimeTypesInfo(parsedDirTree);
