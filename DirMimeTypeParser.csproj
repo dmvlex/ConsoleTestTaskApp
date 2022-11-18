@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.11" />
+    <PackageReference Include="MimeMapping" Version="1.0.1.50" />
+    <PackageReference Include="RazorLight" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DirectoryDataParser\" />
+    <EmbeddedResource Include="ReportTemplate\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ReportTemplate\ReportTemplate.cshtml" />
+    <None Remove="ReportTemplate\TemplateCssPartial.cshtml" />
+    <None Remove="ReportTemplate\TemplateScriptsPartial.cshtml" />
+  </ItemGroup>
+
+</Project>
