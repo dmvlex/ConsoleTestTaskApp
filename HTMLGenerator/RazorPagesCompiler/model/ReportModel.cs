@@ -18,6 +18,9 @@ namespace DirMimeTypeParser.HTMLGenerator.RazorPagesCompiler.model
         /// </summary>
         public double AverageTypeLength { get => Math.Round(TypeFilesLengths.Average(), 2);}
 
+        /// <summary>
+        /// Размеры всех файлов данного типа
+        /// </summary>
         public List<long> TypeFilesLengths = new List<long>();
     }
 
@@ -79,6 +82,28 @@ namespace DirMimeTypeParser.HTMLGenerator.RazorPagesCompiler.model
 
             //Сортируем типы алфавитном порядке
             ParsedMimeTypes.Sort((x, y) => String.Compare(x.Name, y.Name));
+
+            //Считаем кол-во файлов каждого типа в процентном соотношении
+            GetPercentNumsOfTypes();
+        }
+
+        //Получаем общее кол-во файлов 
+        private int GetTotalFilesNum()
+        {
+            int total = 0;
+            foreach (var type in ParsedMimeTypes)
+            {
+                total += type.Num;
+            }
+            return total;
+        }
+
+        private void GetPercentNumsOfTypes()
+        {
+            foreach (var type in ParsedMimeTypes)
+            {
+                type.PercentNum = Math.Round(((double)type.Num / (double)GetTotalFilesNum()) * 100, 2);
+            }
         }
     }
 }
