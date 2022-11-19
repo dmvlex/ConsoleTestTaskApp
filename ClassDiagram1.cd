@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="DirMimeTypeParser.HTMLGenerator.HtmlReportGenerator&lt;T&gt;">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>HTMLGenerator\HtmlReportGenerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DirMimeTypeParser.HTMLGenerator.RazorPagesCompiler.RazorCompiler&lt;T&gt;">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAEA=</HashCode>
+      <FileName>HTMLGenerator\RazorPagesCompiler\RazorCompiler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirMimeTypeParser.HTMLGenerator.RazorPagesCompiler.model.ParsedMimeTypesInfo">
+    <Position X="15" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAEAIAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>HTMLGenerator\RazorPagesCompiler\model\ReportModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirMimeTypeParser.HTMLGenerator.RazorPagesCompiler.model.ReportModel">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAQAAEAAAAAAACAAAAAAAAAAAAg=</HashCode>
+      <FileName>HTMLGenerator\RazorPagesCompiler\model\ReportModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="parsedDirTree" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DirMimeTypeParser.DirectoryDataParser.DirectoryDataTreeParser">
+    <Position X="7.25" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAgAAAAAAIAAAACAAAAACAAAAAAAAA=</HashCode>
+      <FileName>DirectoryDataParser\DirectoryDataTreeParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirMimeTypeParser.DirectoryDataParser.FileNode" BaseTypeListCollapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAARAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>DirectoryDataParser\DirectoryDataTree.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DirMimeTypeParser.DirectoryDataParser.DirNode" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAQgAA=</HashCode>
+      <FileName>DirectoryDataParser\DirectoryDataTree.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="DirMimeTypeParser.HTMLGenerator.IHtmlGenerator">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>HTMLGenerator\HtmlReportGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DirMimeTypeParser.DirectoryDataParser.INode">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>DirectoryDataParser\DirectoryDataTree.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
